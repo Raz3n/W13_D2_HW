@@ -1,5 +1,6 @@
 package com.codeclan.example.Day2HW.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
@@ -17,7 +18,7 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("user")
     @OneToMany(mappedBy = "user")
     private List<Folder> folders;
 

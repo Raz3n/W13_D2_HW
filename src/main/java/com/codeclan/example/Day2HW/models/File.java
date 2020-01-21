@@ -23,7 +23,7 @@ public class File {
 
     @JsonIgnoreProperties("files")
     @ManyToOne
-    @JoinColumn(name = "folder-id", nullable = false)
+    @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
 
 
@@ -35,6 +35,7 @@ public class File {
         this.name = name;
         this.extension = extension;
         this.size = size;
+        this.folder = folder;
     }
 
     public long getId() {

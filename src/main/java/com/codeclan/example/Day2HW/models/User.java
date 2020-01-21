@@ -1,5 +1,7 @@
 package com.codeclan.example.Day2HW.models;
 
+import net.minidev.json.annotate.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,8 @@ public class User {
     @Column(name = "name")
     private String name;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
     private List<Folder> folders;
 
     public User() {

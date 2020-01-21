@@ -33,8 +33,8 @@ public class Folder {
 
     public Folder(String title, User user) {
         this.title = title;
-        this.files = new ArrayList<>();
         this.user = user;
+        this.files = new ArrayList<>();
     }
 
     public long getId() {

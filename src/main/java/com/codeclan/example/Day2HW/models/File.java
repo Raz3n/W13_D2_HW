@@ -3,7 +3,6 @@ package com.codeclan.example.Day2HW.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "files")
@@ -26,8 +25,6 @@ public class File {
     @ManyToOne
     @JoinColumn(name = "folder-id", nullable = false)
     private Folder folder;
-
-
 
 
     public File() {
